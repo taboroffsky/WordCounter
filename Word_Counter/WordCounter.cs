@@ -41,6 +41,7 @@ namespace Word_Counter
                 Console.WriteLine(item.Key.ToString() + ' ' + item.Value);
             }
 
+            //Delay.
             Console.ReadKey();
         }
         /// <summary>
@@ -50,7 +51,7 @@ namespace Word_Counter
         /// <returns>Lower case words array</returns>
         public static IEnumerable<string> SplitText(string rawText)
         {
-            string pattern = "(?!-)[A-Za-z-]+";
+            string pattern = "(?!-)(?!`)[A-Za-z-`]+";
             MatchCollection matches = Regex.Matches(rawText, pattern);
 
             foreach (Match item in matches)
