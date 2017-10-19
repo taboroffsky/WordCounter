@@ -27,6 +27,7 @@ namespace Word_Counter
             catch
             {
                 Console.WriteLine("An error occured while reading from a file.");
+                return;
             }
 
             //Splitting the whole text into an array of words
